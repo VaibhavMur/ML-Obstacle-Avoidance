@@ -16,7 +16,7 @@ def camFeed():
   cv2.imshow("Gray Scale", gray)
   filename = f"photo_{int(time.time())}.jpg"
   fullPath = os.path.join(foldername, filename)
-  cv2.imwrite(fullPath, frame)
+  cv2.imwrite(fullPath, gray)
   if cv2.waitKey(300000) & 0xFF == ord('q') :
     cap.release()
     cv2.destroyAllWindows()
