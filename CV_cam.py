@@ -11,8 +11,9 @@ def camFeed():
 
   foldername = "images"
   os.makedirs(foldername, exist_ok=True)
-
-  cv2.imshow("Camera Feed", frame)
+  gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+  # cv2.imshow("Camera Feed", frame)
+  cv2.imshow("Gray Scale", gray)
   filename = f"photo_{int(time.time())}.jpg"
   fullPath = os.path.join(foldername, filename)
   cv2.imwrite(fullPath, frame)
