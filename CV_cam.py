@@ -14,7 +14,7 @@ def camFeed():
   gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
   # cv2.imshow("Camera Feed", frame)
   cv2.imshow("Gray Scale", gray)
-  filename = f"photo_{int(time.time())}.jpg"
+  filename = f"{int(time.time())}.jpg"
   fullPath = os.path.join(foldername, filename)
   cv2.imwrite(fullPath, frame)
   if cv2.waitKey(300000) & 0xFF == ord('q') :
