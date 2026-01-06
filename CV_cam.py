@@ -6,18 +6,16 @@ import time
 import os
 
 def camFeed():
-  cap = cv2.VideoCapture(1)
+  cap = cv2.VideoCapture(0)
   ret, frame = cap.read()
 
   foldername = "images"
   os.makedirs(foldername, exist_ok=True)
-  gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-  # cv2.imshow("Camera Feed", frame)
-  cv2.imshow("Gray Scale", gray)
-  filename = f"{int(time.time())}.jpg"
+  cv2.imshow("Camera Feed", frame)
+  filename = f"{int(time.time())}.png"
   fullPath = os.path.join(foldername, filename)
   cv2.imwrite(fullPath, frame)
-  if cv2.waitKey(300000) & 0xFF == ord('q') :
+  if cv2.waitKey(0) & 0xFF == ord('q') :
     cap.release()
     cv2.destroyAllWindows()
 
