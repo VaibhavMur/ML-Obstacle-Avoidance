@@ -1,0 +1,7 @@
+path: dataset
+train: images/train
+val: images/test
+
+names:
+  0: obstacle
+  1: fall_zone
