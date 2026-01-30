@@ -8,7 +8,6 @@ start_pt = (W // 2, H)
 end_pt = (W//2, H//2)
 color = (0, 255, 0)
 
-image_path = "images/1768551558.png"
 
 def longDistPath():
 
