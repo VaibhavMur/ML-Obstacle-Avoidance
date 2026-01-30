@@ -1,5 +1,9 @@
-import CV_cam
-import imageProcessing
+from CV_cam import camFeed
+import os
 
-CV_cam.camFeed()
-imageProcessing.imageProcessing()
+camFeed()
+os.wait(10000)  
+
+
+from reactivePath import reactivePoint
+reactivePoint()
