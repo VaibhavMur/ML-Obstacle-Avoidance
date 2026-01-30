@@ -35,7 +35,6 @@ def imageProcessing():
                     (0, 0, 255),
                     2)
   cv2.imshow("Detections", img)
+  cv2.imwrite(latestImage, img)
   cv2.waitKey(0)
-
-if __name__ == "__main__":
-  imageProcessing()
+  return obstacle_boxes
