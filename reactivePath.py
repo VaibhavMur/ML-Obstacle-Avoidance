@@ -61,3 +61,6 @@ cv2.circle(img, (int(x_axis), int(y_axis)), 10, (255, 0, 0), -1)
 
 cv2.imshow("Reactive Point", img)
 cv2.waitKey(0)
+
+
+print("ReactivePath.py executed successfully")

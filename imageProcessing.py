@@ -38,3 +38,7 @@ def imageProcessing():
   cv2.imwrite(latestImage, img)
   cv2.waitKey(0)
   return obstacle_boxes
+
+
+
+print("ImageProcessing.py executed successfully")

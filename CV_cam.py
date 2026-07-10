@@ -16,5 +16,7 @@ filename = f"{int(time.time())}.png"
 fullPath = os.path.join(foldername, filename)
 cv2.imwrite(fullPath, frame)
 if cv2.waitKey(0) & 0xFF == ord('q') :
-  cap.release()
-  cv2.destroyAllWindows()
+ cap.release()
+ cv2.destroyAllWindows()
+
+print("CV_cam.py executed successfully")
